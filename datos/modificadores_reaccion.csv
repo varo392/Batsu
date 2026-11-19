@@ -1,0 +1,8 @@
+id,condicion,acciones,efecto,fuente
+M1,trayecto inviable (viola d_max o ventana temporal),"1,2,3",El desenlace se fuerza a recomendacion_inviable con p_cierre = 0.85; violacion_trust_gate = True; el estado pasa a frustrado.,"Tabla 5.12, regla 1; Capitulo 2 Capa L3"
+M2,paquete ofrecido por encima del presupuesto declarado,"1,2,3",p_cierre x 1.5 (tope 0.90); se transfiere 25 puntos de conversion hacia rechazo; violacion_trust_gate = True.,"Tabla 5.12, regla 2"
+M3,activo solicitado no esta en activos_disponibles,4,"La accion se enmascara: no se ejecuta, el turno cuenta como estancamiento (-0.1) y violacion_trust_gate = True.","Tabla 5.12, regla 3"
+M4,el activo enviado es ubicacion y el estado es desconfiado o ansioso,4,p_cierre x 0.7 y se transfieren 15 puntos de abandono hacia conversion (evidencia verificable / logistica concreta).,"Tabla 4.2, ajuste esperado"
+M6,"etapa AIDA ya en accion y la accion es 1, 2 o 3","1,2,3",p_cierre x 1.4 (tope 0.95) y +20 puntos a conversion.,"Tabla 5.9, reward shaping"
+M7,turno >= 10 (cerca del limite),todas,p_cierre x 1.2; al alcanzar el turno 12 el episodio se trunca con finalizacion_limite_turnos.,"Tabla 5.11, truncated"
+M8,prior de la semilla (resultado_esperado),todas,Se suman 40 puntos (PRIOR_PUNTOS) al desenlace igual al resultado_esperado de la semilla antes de normalizar la distribucion. No altera p_cierre. El valor inicial de 20 dio fidelidad 43 %; 40 da 60 %.,Decision D1; Seccion 5.4.6

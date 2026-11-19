@@ -1,0 +1,59 @@
+{
+  "etiqueta": "v0_escala05_prior40",
+  "fecha": "2026-10-06 01:32:05",
+  "parametros": {
+    "corridas_por_semilla": 100,
+    "escala_p_cierre": 0.5,
+    "epsilon": 0.2,
+    "semilla_global": 20260925,
+    "turno_limite": 12,
+    "r_violacion_trust_gate": -2.0,
+    "prior_puntos": 40
+  },
+  "entradas": {
+    "semillas_maestra.csv": "b37294b9bf3420a2",
+    "tabla_reaccion.csv": "ed3b61ee528a764b",
+    "modificadores_reaccion.csv": "457749878c4fb7e1"
+  },
+  "versiones": {
+    "python": "3.13.16",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "gymnasium": "1.3.0"
+  },
+  "resultados": {
+    "transiciones": 26343,
+    "episodios": 6000,
+    "turnos_promedio": 4.391,
+    "retorno_promedio": 4.4,
+    "desenlaces": {
+      "conversion": 0.4782,
+      "avance_parcial": 0.2475,
+      "abandono": 0.1148,
+      "rechazo": 0.068,
+      "recomendacion_inviable": 0.0635,
+      "finalizacion_limite_turnos": 0.028
+    },
+    "fidelidad_prior": 0.6,
+    "fidelidad_en_rango": true,
+    "tasa_violacion_trust_gate": 0.0496
+  },
+  "juez": {
+    "completado": false,
+    "modelo": null,
+    "nota": "r_juez = 0 en esta versión (D6); se completa en el notebook 04"
+  },
+  "generador": {
+    "modelo": "mistralai/Mistral-7B-Instruct-v0.3",
+    "precision": "fp16",
+    "motor": "vllm 0.31.0",
+    "temperatura": 0.7,
+    "top_p": 0.9,
+    "idioma_internacional": "es",
+    "max_palabras_mensaje": 40,
+    "fecha": "2026-10-06 02:11:32",
+    "episodios_redactados": 144,
+    "episodios_validos": 143,
+    "completo": false
+  }
+}

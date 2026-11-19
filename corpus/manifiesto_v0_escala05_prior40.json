@@ -1,0 +1,86 @@
+{
+  "etiqueta": "v0_escala05_prior40",
+  "fecha": "2026-10-13 22:21:33",
+  "parametros": {
+    "corridas_por_semilla": 100,
+    "escala_p_cierre": 0.5,
+    "epsilon": 0.2,
+    "semilla_global": 20260925,
+    "turno_limite": 12,
+    "r_violacion_trust_gate": -2.0,
+    "prior_puntos": 40,
+    "dim_estado": 21
+  },
+  "entradas": {
+    "semillas_maestra.csv": "b37294b9bf3420a2",
+    "tabla_reaccion.csv": "ed3b61ee528a764b",
+    "modificadores_reaccion.csv": "8b689779f6e391bf"
+  },
+  "codigo": {
+    "batsu_sim.py": "fc6d641ae8fc167c"
+  },
+  "versiones": {
+    "python": "3.13.16",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "gymnasium": "1.3.0"
+  },
+  "resultados": {
+    "transiciones": 26343,
+    "episodios": 6000,
+    "turnos_promedio": 4.391,
+    "retorno_promedio": 4.4,
+    "desenlaces": {
+      "conversion": 0.4782,
+      "avance_parcial": 0.2475,
+      "abandono": 0.1148,
+      "rechazo": 0.068,
+      "recomendacion_inviable": 0.0635,
+      "finalizacion_limite_turnos": 0.028
+    },
+    "fidelidad_prior": 0.6,
+    "fidelidad_en_rango": true,
+    "tasa_violacion_trust_gate": 0.0496
+  },
+  "juez": {
+    "completado": true,
+    "modelo": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "precision": "fp16",
+    "motor": "vllm 0.31.0",
+    "temperatura": 0.0,
+    "pesos": {
+      "adquisicion_necesidades": 0.5,
+      "ritmo": 0.5
+    },
+    "normalizacion": "r_juez = (puntaje - 3) / 2",
+    "fecha": "2026-10-14 15:48:10",
+    "turnos_juzgados": 26343,
+    "turnos_sin_puntaje": 0,
+    "cobertura": 1.0,
+    "prompt_sha256": "1dcf58b9ba383117"
+  },
+  "generador": {
+    "modelo": "mistralai/Mistral-7B-Instruct-v0.3",
+    "precision": "fp16",
+    "motor": "vllm 0.31.0",
+    "temperatura": 0.7,
+    "top_p": 0.9,
+    "idioma_internacional": "es",
+    "max_palabras_mensaje": 40,
+    "prompt_sha256": "6cb6529860c93993",
+    "fecha": "2026-10-14 07:55:32",
+    "episodios_redactados": 6000,
+    "episodios_validos": 6000,
+    "validacion_esquema": {
+      "invalidos": 0,
+      "motivos": {}
+    },
+    "completo": true,
+    "decodificacion_guiada": {
+      "metodo": "vLLM response_format json_schema (exactamente N turnos)",
+      "episodios": 644,
+      "sin_guiada": 5356,
+      "motivo": "el modelo ignoraba el numero de turnos en episodios cortos; el prompt no cambia (misma huella)"
+    }
+  }
+}

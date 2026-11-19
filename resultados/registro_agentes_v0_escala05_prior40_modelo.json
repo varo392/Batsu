@@ -1,0 +1,292 @@
+{
+  "etiqueta_corpus": "v0_escala05_prior40",
+  "modo_recompensa": "modelo",
+  "fecha": "2026-10-14 19:27:23",
+  "huellas": {
+    "corpus_parquet": "a9726d610740d384",
+    "batsu_sim.py": "fc6d641ae8fc167c",
+    "modelo_recompensa": "f804e565bb36d5ba",
+    "prompt_generador": "6cb6529860c93993",
+    "prompt_juez": "1dcf58b9ba383117"
+  },
+  "hardware": {
+    "cpu": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+    "nucleos": 2,
+    "hilos_torch": 1
+  },
+  "clave_aleatoria": 20260925,
+  "claves_replicas": [
+    20260925,
+    20260926,
+    20260927,
+    20260928,
+    20260929
+  ],
+  "conjuntos": {
+    "seleccion": 300,
+    "prueba": 600,
+    "rng_seleccion": 20260926,
+    "rng_prueba": 20260927
+  },
+  "hiperparametros": {
+    "DQN": {
+      "learning_rate": 0.0005,
+      "buffer_size": 300000,
+      "learning_starts": 0,
+      "batch_size": 128,
+      "gamma": 0.95,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "target_update_interval": 1000,
+      "exploration_fraction": 0.3,
+      "exploration_initial_eps": 1.0,
+      "exploration_final_eps": 0.05,
+      "policy_kwargs": "{'net_arch': [64, 64]}"
+    },
+    "QR-DQN": {
+      "learning_rate": 0.0005,
+      "buffer_size": 300000,
+      "learning_starts": 0,
+      "batch_size": 128,
+      "gamma": 0.95,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "target_update_interval": 1000,
+      "exploration_fraction": 0.3,
+      "exploration_initial_eps": 1.0,
+      "exploration_final_eps": 0.05,
+      "policy_kwargs": "{'net_arch': [64, 64], 'n_quantiles': 50, 'optimizer_class': <class 'torch.optim.adam.Adam'>, 'optimizer_kwargs': {'eps': 7.8125e-05}}"
+    },
+    "PPO": {
+      "learning_rate": 0.0003,
+      "n_steps": 2048,
+      "batch_size": 128,
+      "n_epochs": 10,
+      "gamma": 0.95,
+      "gae_lambda": 0.95,
+      "clip_range": 0.2,
+      "ent_coef": 0.01,
+      "policy_kwargs": "{'net_arch': [64, 64]}"
+    }
+  },
+  "criterio_parada": {
+    "max_pasos": 200000,
+    "eval_cada": 10000,
+    "paciencia": 5
+  },
+  "replicas": [
+    {
+      "algoritmo": "DQN",
+      "replica": 1,
+      "clave": 20260925,
+      "pasos": 150000,
+      "mejor_paso": 100000,
+      "retorno_seleccion": 8.213,
+      "minutos": 3.8,
+      "modelo": "DQN_v0_escala05_prior40_modelo_r1"
+    },
+    {
+      "algoritmo": "DQN",
+      "replica": 2,
+      "clave": 20260926,
+      "pasos": 140000,
+      "mejor_paso": 90000,
+      "retorno_seleccion": 8.026,
+      "minutos": 3.6,
+      "modelo": "DQN_v0_escala05_prior40_modelo_r2"
+    },
+    {
+      "algoritmo": "DQN",
+      "replica": 3,
+      "clave": 20260927,
+      "pasos": 100000,
+      "mejor_paso": 50000,
+      "retorno_seleccion": 8.266,
+      "minutos": 2.5,
+      "modelo": "DQN_v0_escala05_prior40_modelo_r3"
+    },
+    {
+      "algoritmo": "DQN",
+      "replica": 4,
+      "clave": 20260928,
+      "pasos": 130000,
+      "mejor_paso": 80000,
+      "retorno_seleccion": 8.07,
+      "minutos": 3.1,
+      "modelo": "DQN_v0_escala05_prior40_modelo_r4"
+    },
+    {
+      "algoritmo": "DQN",
+      "replica": 5,
+      "clave": 20260929,
+      "pasos": 150000,
+      "mejor_paso": 100000,
+      "retorno_seleccion": 8.252,
+      "minutos": 3.7,
+      "modelo": "DQN_v0_escala05_prior40_modelo_r5"
+    },
+    {
+      "algoritmo": "QR-DQN",
+      "replica": 1,
+      "clave": 20260925,
+      "pasos": 100000,
+      "mejor_paso": 50000,
+      "retorno_seleccion": 8.258,
+      "minutos": 6.4,
+      "modelo": "QR-DQN_v0_escala05_prior40_modelo_r1"
+    },
+    {
+      "algoritmo": "QR-DQN",
+      "replica": 2,
+      "clave": 20260926,
+      "pasos": 110000,
+      "mejor_paso": 60000,
+      "retorno_seleccion": 8.326,
+      "minutos": 6.9,
+      "modelo": "QR-DQN_v0_escala05_prior40_modelo_r2"
+    },
+    {
+      "algoritmo": "QR-DQN",
+      "replica": 3,
+      "clave": 20260927,
+      "pasos": 70000,
+      "mejor_paso": 20000,
+      "retorno_seleccion": 8.458,
+      "minutos": 4.3,
+      "modelo": "QR-DQN_v0_escala05_prior40_modelo_r3"
+    },
+    {
+      "algoritmo": "QR-DQN",
+      "replica": 4,
+      "clave": 20260928,
+      "pasos": 100000,
+      "mejor_paso": 50000,
+      "retorno_seleccion": 8.34,
+      "minutos": 6.1,
+      "modelo": "QR-DQN_v0_escala05_prior40_modelo_r4"
+    },
+    {
+      "algoritmo": "QR-DQN",
+      "replica": 5,
+      "clave": 20260929,
+      "pasos": 160000,
+      "mejor_paso": 110000,
+      "retorno_seleccion": 8.337,
+      "minutos": 9.9,
+      "modelo": "QR-DQN_v0_escala05_prior40_modelo_r5"
+    },
+    {
+      "algoritmo": "PPO",
+      "replica": 1,
+      "clave": 20260925,
+      "pasos": 200000,
+      "mejor_paso": 150000,
+      "retorno_seleccion": 8.333,
+      "minutos": 5.1,
+      "modelo": "PPO_v0_escala05_prior40_modelo_r1"
+    },
+    {
+      "algoritmo": "PPO",
+      "replica": 2,
+      "clave": 20260926,
+      "pasos": 200704,
+      "mejor_paso": 160000,
+      "retorno_seleccion": 8.308,
+      "minutos": 5.0,
+      "modelo": "PPO_v0_escala05_prior40_modelo_r2"
+    },
+    {
+      "algoritmo": "PPO",
+      "replica": 3,
+      "clave": 20260927,
+      "pasos": 170000,
+      "mejor_paso": 120000,
+      "retorno_seleccion": 8.257,
+      "minutos": 4.2,
+      "modelo": "PPO_v0_escala05_prior40_modelo_r3"
+    },
+    {
+      "algoritmo": "PPO",
+      "replica": 4,
+      "clave": 20260928,
+      "pasos": 200704,
+      "mejor_paso": 200000,
+      "retorno_seleccion": 8.111,
+      "minutos": 4.9,
+      "modelo": "PPO_v0_escala05_prior40_modelo_r4"
+    },
+    {
+      "algoritmo": "PPO",
+      "replica": 5,
+      "clave": 20260929,
+      "pasos": 200000,
+      "mejor_paso": 150000,
+      "retorno_seleccion": 8.435,
+      "minutos": 4.9,
+      "modelo": "PPO_v0_escala05_prior40_modelo_r5"
+    }
+  ],
+  "versiones": {
+    "sb3": "2.9.0",
+    "sb3_contrib": "2.9.0",
+    "torch": "2.11.0+cpu",
+    "gymnasium": "1.3.0"
+  },
+  "comparacion": {
+    "Aleatoria": {
+      "retorno": 0.089,
+      "retorno_ic95": 0.513,
+      "turnos": 3.248,
+      "conversion": 0.22,
+      "inviable": 0.052,
+      "negativos": 0.517,
+      "violaciones_por_ep": 0.515,
+      "pasos_hasta_mejor": NaN,
+      "minutos": NaN
+    },
+    "Heurística (referencia)": {
+      "retorno": 7.532,
+      "retorno_ic95": 0.519,
+      "turnos": 4.328,
+      "conversion": 0.585,
+      "inviable": 0.065,
+      "negativos": 0.142,
+      "violaciones_por_ep": 0.08,
+      "pasos_hasta_mejor": NaN,
+      "minutos": NaN
+    },
+    "DQN": {
+      "retorno": 8.446,
+      "retorno_ic95": 0.136,
+      "turnos": 4.643,
+      "conversion": 0.606,
+      "inviable": 0.0,
+      "negativos": 0.107,
+      "violaciones_por_ep": 0.0,
+      "pasos_hasta_mejor": 84000.0,
+      "minutos": 3.34
+    },
+    "QR-DQN": {
+      "retorno": 8.448,
+      "retorno_ic95": 0.094,
+      "turnos": 5.135,
+      "conversion": 0.584,
+      "inviable": 0.0,
+      "negativos": 0.07,
+      "violaciones_por_ep": 0.0,
+      "pasos_hasta_mejor": 58000.0,
+      "minutos": 6.72
+    },
+    "PPO": {
+      "retorno": 8.357,
+      "retorno_ic95": 0.051,
+      "turnos": 5.0,
+      "conversion": 0.583,
+      "inviable": 0.001,
+      "negativos": 0.073,
+      "violaciones_por_ep": 0.002,
+      "pasos_hasta_mejor": 156000.0,
+      "minutos": 4.82
+    }
+  }
+}

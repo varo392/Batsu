@@ -1,0 +1,145 @@
+{
+  "etiqueta_corpus": "v0_escala05_prior40",
+  "modo_recompensa": "modelo",
+  "fecha": "2026-10-14 17:46:28",
+  "huellas": {
+    "corpus_parquet": "a9726d610740d384",
+    "batsu_sim.py": "fc6d641ae8fc167c",
+    "prompt_generador": "6cb6529860c93993",
+    "prompt_juez": "1dcf58b9ba383117"
+  },
+  "clave_aleatoria": 20260925,
+  "claves_replicas": [
+    20260925,
+    20260926,
+    20260927,
+    20260928,
+    20260929
+  ],
+  "conjuntos": {
+    "seleccion": 300,
+    "prueba": 600,
+    "rng_seleccion": 20260926,
+    "rng_prueba": 20260927
+  },
+  "hiperparametros": {
+    "learning_rate": 0.0005,
+    "buffer_size": 300000,
+    "learning_starts": 0,
+    "batch_size": 128,
+    "gamma": 0.95,
+    "train_freq": 4,
+    "gradient_steps": 1,
+    "target_update_interval": 1000,
+    "exploration_fraction": 0.3,
+    "exploration_initial_eps": 1.0,
+    "exploration_final_eps": 0.05,
+    "policy_kwargs": "{'net_arch': [64, 64]}"
+  },
+  "criterio_parada": {
+    "max_pasos": 200000,
+    "eval_cada": 10000,
+    "paciencia": 5
+  },
+  "replicas": {
+    "1": {
+      "clave": 20260925,
+      "pasos": 120000,
+      "mejor_paso": 70000,
+      "retorno_seleccion": 8.112,
+      "minutos": 2.3,
+      "modelo": "dqn_v0_escala05_prior40_modelo_r1"
+    },
+    "2": {
+      "clave": 20260926,
+      "pasos": 150000,
+      "mejor_paso": 100000,
+      "retorno_seleccion": 8.075,
+      "minutos": 2.9,
+      "modelo": "dqn_v0_escala05_prior40_modelo_r2"
+    },
+    "3": {
+      "clave": 20260927,
+      "pasos": 110000,
+      "mejor_paso": 60000,
+      "retorno_seleccion": 8.279,
+      "minutos": 2.0,
+      "modelo": "dqn_v0_escala05_prior40_modelo_r3"
+    },
+    "4": {
+      "clave": 20260928,
+      "pasos": 100000,
+      "mejor_paso": 50000,
+      "retorno_seleccion": 8.103,
+      "minutos": 1.9,
+      "modelo": "dqn_v0_escala05_prior40_modelo_r4"
+    },
+    "5": {
+      "clave": 20260929,
+      "pasos": 90000,
+      "mejor_paso": 40000,
+      "retorno_seleccion": 8.211,
+      "minutos": 1.7,
+      "modelo": "dqn_v0_escala05_prior40_modelo_r5"
+    }
+  },
+  "versiones": {
+    "sb3": "2.9.0",
+    "torch": "2.11.0+cpu",
+    "gymnasium": "1.3.0"
+  },
+  "comparacion": {
+    "Aleatoria": {
+      "retorno": 0.089,
+      "retorno_ic95": 0.513,
+      "turnos": 3.248,
+      "conversion": 0.22,
+      "inviable": 0.052,
+      "negativos": 0.517,
+      "violaciones_por_ep": 0.515
+    },
+    "Heurística (referencia)": {
+      "retorno": 7.532,
+      "retorno_ic95": 0.519,
+      "turnos": 4.328,
+      "conversion": 0.585,
+      "inviable": 0.065,
+      "negativos": 0.142,
+      "violaciones_por_ep": 0.08
+    },
+    "DQN": {
+      "retorno": 8.488,
+      "retorno_ic95": 0.055,
+      "turnos": 4.683,
+      "conversion": 0.609,
+      "inviable": 0.0,
+      "negativos": 0.099,
+      "violaciones_por_ep": 0.0
+    },
+    "DQN + Trust Gate": {
+      "retorno": 8.488,
+      "retorno_ic95": 0.055,
+      "turnos": 4.683,
+      "conversion": 0.609,
+      "inviable": 0.0,
+      "negativos": 0.099,
+      "violaciones_por_ep": 0.0
+    }
+  },
+  "modelo_recompensa": {
+    "entradas": 49,
+    "transiciones_entrenamiento": 21181,
+    "transiciones_validacion": 5162,
+    "episodios_validacion": 1200,
+    "mse": 0.072,
+    "mae": 0.198,
+    "r2": 0.174,
+    "spearman_orden_acciones": 1.0,
+    "spearman_orden_estados": 0.9
+  },
+  "hardware": {
+    "cpu": "AMD EPYC 7B12",
+    "nucleos": 2,
+    "hilos_torch": 1
+  }
+}

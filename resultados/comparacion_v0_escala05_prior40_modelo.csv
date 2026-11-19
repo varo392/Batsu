@@ -1,0 +1,5 @@
+,retorno,retorno_ic95,turnos,conversion,inviable,negativos,violaciones_por_ep
+Aleatoria,0.089,0.513,3.248,0.22,0.052,0.517,0.515
+Heurística (referencia),7.532,0.519,4.328,0.585,0.065,0.142,0.08
+DQN,8.488,0.055,4.683,0.609,0.0,0.099,0.0
+DQN + Trust Gate,8.488,0.055,4.683,0.609,0.0,0.099,0.0
